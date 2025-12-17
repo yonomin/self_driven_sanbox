@@ -1,0 +1,2 @@
+# self_driven_sanbox
+模拟沙盒,能做到由npc与事件驱动的世界生成与世界更新
