@@ -1,0 +1,33 @@
+
+# Rust 编译产物和源码备份文件
+/target/           # Rust 编译输出目录，包含二进制文件、依赖库等，非常大且可重新生成
+rust/target/       # 嵌套目录的编译输出
+**/*.rs.bk         # Rust 源码备份文件（编辑器自动生成的备份）
+*.pdb              # Windows 调试符号文件（用于调试器）
+
+# Cargo 包管理器
+Cargo.lock         # 依赖版本锁定文件（库项目不提交，应用项目可提交以确保可重复构建）
+
+# IDE（集成开发环境）配置文件
+.vscode/           # Visual Studio Code 配置（settings.json, 扩展推荐等）
+.idea/             # IntelliJ IDEA / CLion / RustRover 配置
+*.swp              # Vim 交换文件（临时文件）
+*.swo              # Vim 窗口配置文件
+*~                 # 临时备份文件（某些编辑器生成的备份）
+
+# 操作系统生成的文件
+.DS_Store          # macOS 系统文件（存储文件夹显示设置等）
+Thumbs.db          # Windows 缩略图缓存文件
+
+# Bevy 游戏引擎特定文件
+*.wgsl.bc          # WebGPU 着色器字节码缓存（.wgsl 是 Bevy 的着色器语言）
+
+# 其他构建产物
+/build/            # 额外的构建输出目录（某些构建脚本使用）
+/dist/             # 分发目录（打包后的应用程序）
+
+# 调试信息文件
+*.dwarf/           # DWARF 调试信息（Linux/macOS 的调试格式）
+
+# 日志文件
+*.log              # 应用程序运行日志（调试日志、错误日志等）
