@@ -6,6 +6,7 @@ use bevy::prelude::*;
 fn main() {
     App::new()
         .add_plugins(DefaultPlugins)
+        .add_plugins(camera_controller::CameraControllerPlugin)
         .add_systems(Startup, setup)
         .add_systems(Update, draw_cursor)
         .run();
@@ -23,6 +24,7 @@ fn setup(
     //摄像机
     commands.spawn((
         Camera3d::default(),
+        camera_controller::CameraController::default(),
         Transform::from_xyz(15., 5., 15.).looking_at(Vec3::ZERO, Vec3::Y),
     ));
     //平面
